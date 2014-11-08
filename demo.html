@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-ES">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+
+    <title>funny-word-switch demo</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="funny-words.js"></script>
+
+    <style>
+    body {
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Find cheap flights to <span id="city"></span>.</h1>
+
+    <script>
+    var cities = [
+      'London',
+      'Berlin',
+      'Madrid',
+      'Copenhague',
+      'Rome',
+      'Vienna',
+    ];
+
+    $(document).ready(function() {
+      $('#city').funnyWordSwitch({
+        words: cities,
+        selectionColor: '#FFF',
+        selectionBgColor: '#3399FF',
+        speed: 100
+      });
+    });
+    </script>
+  </body>
+</html>
